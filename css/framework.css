@@ -392,6 +392,15 @@ hr {
   clear: both; 
 }
 
+/* Animation Classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fadeIn { animation: fadeIn 1.5s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Larger than mobile */
