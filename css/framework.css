@@ -148,6 +148,7 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; 
+  box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.4);
 }
 
 .button:hover,
