@@ -39,15 +39,31 @@ nav {
   margin: 0 auto;
 }
 
-nav label {
-  width: 100%;
-  font-size: 2em;
-  text-align: right;
-  cursor: pointer;
-}
-
 #menu-toggle {
   display: none;
+}
+
+#toggle-icon {
+  margin-left: 88%;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+#menu-toggle:checked ~ label > #toggle-icon > .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+#menu-toggle:checked ~ label > #toggle-icon > .bar2 {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ label > #toggle-icon > .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 nav a {
@@ -67,7 +83,6 @@ nav a {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 footer {
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -389,7 +404,10 @@ hr {
 }
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
   .container {
     width: 80%; 
   }
@@ -435,9 +453,6 @@ hr {
     font-size: 1.25em;
   }
 }
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
 
 /* Larger than desktop */
 @media (min-width: 1000px) {}

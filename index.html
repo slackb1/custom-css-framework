@@ -1,107 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-  <!-- Basic Page Needs
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your new title :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <title>Your new title :)</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/framework.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Font Awesome Icons
+    <!-- Font Awesome Icons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
 
-  <!-- Favicon
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
+
 <body>
-  
-  <!-- Be sure to keep label and input -->
-  <nav>
-    <input type="checkbox" id="menu-toggle" autocomplete="off"> <!-- autocomplete must be off for Firefox -->
-    <label for="menu-toggle">&#9776;</label>
-      <a href="#home" class="active">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-  </nav>
 
-  <div class="container">
-    <div class="row">
-        <div class="col-12 text-center">
-            <h2>Big Hero Section</h2>
-            <button class="button">More info</button>
-            <button class="button button-primary">Call to Action</button>
-        </div>
-    </div>
-<hr>
-    <div class="row">
-        <div class="col-4 text-center">
-            <h4>Lorem</h4>
-            <p>Bye bye Miss American Pie</p>
-        </div>
-        <div class="col-4 text-center">
-            <h4>Ipsum</h4>
-            <p>Drove my Chevy to the levy</p>
-        </div>
-        <div class="col-4 text-center">
-            <h4>Sio</h4>
-            <p>But the levy was dry</p>
-        </div>
-    </div>
-<hr>
-    <div class="row">
-        <div class="col-6">
-            <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
-            <p>I also inlcude Font Awesome.</p>
-        </div>
-        <div class="col-3">
-            <ul>
-                <li>
-                    Unordered
-                </li>
-                <li>
-                    Lists
-                </li>
-                <li>
-                    Rule
-                </li>
-            </ul>
-        </div>
-        <div class="col-3">
-            <ol>
-                <li>
-                    Ordered
-                </li>
-                <li>
-                    Lists
-                </li>
-                <li>
-                    Too
-                </li>
-            </ol>
-        </div>
-    </div>
-  </div> <!-- end of container -->
+    <!-- Be sure to keep label and input -->
+    <nav>
+        <input type="checkbox" id="menu-toggle" autocomplete="off">
+        <!-- autocomplete must be off for Firefox -->
+        <label for="menu-toggle" id="toggle">
+            <div id="toggle-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </label>
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </nav>
 
-  <!-- footer will stay anchored to bottom
-    you can also add columns (wrapped in container, of course) -->
-  <footer>
-      &copy; John Doe 2018
-  </footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Big Hero Section</h2>
+                <button class="button">More info</button>
+                <button class="button button-primary">Call to Action</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-4 text-center">
+                <h4>Lorem</h4>
+                <p>Bye bye Miss American Pie</p>
+            </div>
+            <div class="col-4 text-center">
+                <h4>Ipsum</h4>
+                <p>Drove my Chevy to the levy</p>
+            </div>
+            <div class="col-4 text-center">
+                <h4>Sio</h4>
+                <p>But the levy was dry</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <i class="fa fa-flag fa-5x" aria-hidden="true"></i>
+                <p>I also inlcude Font Awesome.</p>
+            </div>
+            <div class="col-3">
+                <ul>
+                    <li>
+                        Unordered
+                    </li>
+                    <li>
+                        Lists
+                    </li>
+                    <li>
+                        Rule
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <ol>
+                    <li>
+                        Ordered
+                    </li>
+                    <li>
+                        Lists
+                    </li>
+                    <li>
+                        Too
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!--end of container-->
+    <footer>
+        &copy; John Doe 2018
+    </footer>
 </body>
+
 </html>
