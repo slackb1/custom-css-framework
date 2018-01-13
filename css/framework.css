@@ -4,9 +4,9 @@
   Github: https://github.com/slackb1/custom-css-framework
 
   - Free to use, edit, etc.
-  - Grid system, responsive nav menu, buttons, mobile first code
+  - Grid system (float/percentage based), responsive nav menu, buttons, cards, 
   - Mainly adapted from Skeleton CSS which is no longer updated on Github
-  - Meant to be used alongside normalize.css
+  - Meant to be used alongside normalize.css (pulled in by CDN link on example index.html)
   
   This is a mobile first CSS file. 
   Larger device media queries are found at the bottom of the file
@@ -39,13 +39,9 @@ nav {
   margin: 0 auto;
 }
 
-#menu-toggle {
-  display: none;
-}
+#menu-toggle { display: none; }
 
-#toggle-icon {
-  margin-left: 88%;
-}
+#toggle-icon { margin-left: 88%; }
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
@@ -54,17 +50,11 @@ nav {
   transition: 0.3s;
 }
 
-#menu-toggle:checked ~ label > #toggle-icon > .bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
+#menu-toggle:checked ~ label > #toggle-icon > .bar1 { transform: rotate(-45deg) translate(-9px, 6px); }
 
-#menu-toggle:checked ~ label > #toggle-icon > .bar2 {
-  opacity: 0;
-}
+#menu-toggle:checked ~ label > #toggle-icon > .bar2 { opacity: 0; }
 
-#menu-toggle:checked ~ label > #toggle-icon > .bar3 {
-  transform: rotate(45deg) translate(-8px, -8px);
-}
+#menu-toggle:checked ~ label > #toggle-icon > .bar3 { transform: rotate(45deg) translate(-8px, -8px); }
 
 nav a {
   text-decoration: none;
@@ -97,7 +87,9 @@ footer {
 html is set to 62.5% so that all the REM measurements throughout
 are based on 10px sizing. So 1.5rem = 15px  */
 html {
-  font-size: 62.5%; 
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 body {
@@ -105,7 +97,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #222;
+  color: #333;
 }
 
 /* Typography
@@ -144,7 +136,7 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; 
@@ -215,7 +207,7 @@ select {
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
   border: 1px solid #D1D1D1;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   box-shadow: none;
   box-sizing: border-box; 
 }
@@ -300,7 +292,7 @@ code {
   white-space: nowrap;
   background: #F1F1F1;
   border: 1px solid #E1E1E1;
-  border-radius: 4px; 
+  /* border-radius: 4px;  */
 }
 
 pre > code {
@@ -327,6 +319,22 @@ th:last-child,
 td:last-child {
   padding-right: 0; 
 }
+
+/* Cards
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    padding: 15px;
+    border: 1px solid #999;
+    margin: 0 auto;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-color: #555;
+}
+
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -366,21 +374,19 @@ form {
   box-sizing: border-box; 
 }
 
-.float-right {
-  float: right; 
-}
+.auto-margin { margin: auto 0; }
 
-.float-left {
-  float: left; 
-}
+.float-right { float: right;  }
+.float-left  { float: left;   }
 
-.text-center {
-    text-align: center;
-}
+.text-left    { text-align: left;   }
+.text-center  { text-align: center; }
+.text-right   { text-align: right;  }
 
-.text-right {
-    text-align: right;
-}
+.corners-round    { border-radius: 25px; }
+.corners-rounded  { border-radius: 10px; }
+.corners-sharp    { border-radius: 0px;  }
+
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -404,7 +410,7 @@ hr {
 
 /* Animation Classes
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.fadeIn { animation: fadeIn 1.5s; }
+.fadeIn { animation: fadeIn 1.2s; }
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -422,22 +428,16 @@ hr {
 
 }
 
-/* Larger than phablet (also point when grid becomes active) */
+/* Larger than phablet */
 @media (min-width: 550px) {}
 
-/* Larger than tablet */
+/* Larger than tablet )also point when grid becomes active) */
 @media (min-width: 750px) {
-  .container {
-    width: 80%; 
-  }
+  .container { width: 80%; }
 
-  [class^="col-"] {
-    margin-left: 4%; 
-  }
+  [class^="col-"] { margin-left: 4%; }
 
-  [class^="col-"]:first-child {
-    margin-left: 0; 
-  }
+  [class^="col-"]:first-child { margin-left: 0; }
 
   .col-1   { width: 4.66666666667%; }
   .col-2   { width: 13.3333333333%; }
@@ -459,13 +459,9 @@ hr {
   h5 { font-size: 2.4rem; }
   h6 { font-size: 1.5rem; }  
 
-  nav {
-    padding: 10px 35px;
-  }
+  nav { padding: 10px 35px; }
   
-  nav label {
-    display: none;
-  }
+  nav label { display: none; }
 
   nav a {
     display: inline-block;

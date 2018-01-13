@@ -6,6 +6,7 @@
     <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Your new title :)</title>
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,18 +17,14 @@
 
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Font Awesome Icons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
-
-    <!-- jQuery
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -48,16 +45,16 @@
                 <div class="bar3"></div>
             </div>
         </label>
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="#home">CSS</a>
+        <a href="#news">Responsive</a>
+        <a href="#contact">Nav</a>
+        <a href="#about">Menu</a>
     </nav>
 
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h2>Big Hero Section</h2>
+                <h2>CSS Framework</h2>
                 <button class="button">More info</button>
                 <button class="button button-primary">Call to Action</button>
             </div>
@@ -65,18 +62,61 @@
         <hr>
         <div class="row">
             <div class="col-4 text-center">
-                <h4>Lorem</h4>
+                <h4>12 Column</h4>
                 <p>Bye bye Miss American Pie</p>
             </div>
             <div class="col-4 text-center">
-                <h4>Ipsum</h4>
+                <h4>Grid</h4>
                 <p>Drove my Chevy to the levy</p>
             </div>
             <div class="col-4 text-center">
-                <h4>Sio</h4>
+                <h4>System</h4>
                 <p>But the levy was dry</p>
             </div>
         </div>
+        <hr>
+        <div class="row text-center">
+            <div class="col-2 text-left">
+                <h6>Buttons</h6>
+                <code>.button</code>
+            </div>
+            <div class="col-2">
+                <p><code>.button</code></p>
+                <button class="button">Hello</button>
+            </div>
+            <div class="col-2">
+                <p><code>.button-primary</code></p>
+                <button class="button button-primary">World</button>
+            </div>
+            <div class="col-2">
+                <p><code>.corners-rounded</code></p>
+                <button class="button corners-rounded">Rounded</button>
+            </div>
+            <div class="col-2">
+                <p><code>.corners-round</code></p>
+                <button class="button button-primary corners-round">Round</button>
+            </div>
+        </div>
+        <!-- end of row -->
+        <hr>
+        <div class="row text-center">
+            <div class="col-2 text-left">
+                <h6>Cards</h6>
+                <code>.card</code>
+            </div>
+            <div class="col-5">
+                <p><code>.corners-rounded</code></p>
+                <div class="card corners-rounded" style="max-width:250px; margin-bottom: 10px;">
+                    I'm an example card with round corners!
+                </div>
+            </div>
+            <div class="col-5">
+                <p><code>.corners-sharp</code></p>
+                <div class="card corners-sharp" style="max-width: 250px; margin-bottom: 10px;">
+                    I'm an example card with sharp corners!</div>
+            </div>
+        </div>
+        <!-- end of row -->
         <hr>
         <div class="row">
             <div class="col-6">
@@ -109,16 +149,20 @@
                     </li>
                 </ol>
             </div>
-        </div>
+        </div> <!-- end of row -->
     </div>
     <!--end of container-->
-    <footer>
+    <footer id="home">
         &copy; John Doe 2018
     </footer>
 </body>
 
-<!-- Load in smooth scroll
+<!-- JavaScript
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script src="js/smoothScroll.js"></script>
+<!-- Load in jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Load in smooth scroll -->
+<script defer src="js/smoothScroll.js"></script>
 
 </html>
