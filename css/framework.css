@@ -6,7 +6,7 @@
   - Free to use, edit, etc.
   - Grid system (float/percentage based), responsive nav menu, buttons, cards, 
   - Mainly adapted from Skeleton CSS which is no longer updated on Github
-  - Meant to be used alongside normalize.css (pulled in by CDN link on example index.html)
+  - Meant to be used alongside normalize.css
   
   This is a mobile first CSS file. 
   Larger device media queries are found at the bottom of the file
@@ -20,7 +20,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 25px 0px;
   box-sizing: border-box;
 }
 
@@ -125,13 +125,13 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 50px;
+  height: 38px;
   padding: 0 30px;
   color: #555;
   text-align: center;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 600;
-  line-height: 50px;
+  line-height: 38px;
   letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -328,7 +328,9 @@ td:last-child {
     transition: all 0.3s ease-in-out;
     padding: 15px;
     border: 1px solid #999;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 }
 
 .card:hover {
@@ -385,7 +387,7 @@ form {
 .text-right   { text-align: right;  }
 
 .corners-round    { border-radius: 25px; }
-.corners-rounded  { border-radius: 10px; }
+.corners-rounded  { border-radius: 5px; }
 .corners-sharp    { border-radius: 0px;  }
 
 
@@ -424,7 +426,7 @@ hr {
 @media (min-width: 400px) {
   .container {
     width: 85%;
-    padding: 0; 
+    /* padding: 0;  */
   }
 
 }
